@@ -1,0 +1,79 @@
+[
+  {
+    "title": "headphones",
+    "description": " Active noise-cancelling headphones that contain a built-in microphone",
+    "product_image": "https://unsplash.com/photos/PDX_a_82obo",
+    "price": 50.5,
+    "likes": 0
+  },
+  {
+    "title": "smart watch",
+    "description": " Digital watch that provides many other features besides timekeeping",
+    "product_image": "https://unsplash.com/photos/2cFZ_FB08UM",
+    "price": 100,
+    "likes": 0
+  },
+  {
+    "title": "basketball shoes",
+    "description": "Designed with performance, comfort and fashion in mind. Knowing what features best fit your game can help take you from the bench to the paint in no time",
+    "product_image": "https://unsplash.com/photos/LxVxPA1LOVM",
+    "price": 80,
+    "likes": 0
+  },
+  {
+    "title": "sunglasses",
+    "description": "Designed primarily to prevent bright sunlight and high-energy visible light from damaging eyes",
+    "product_image": "https://unsplash.com/photos/K62u25Jk6vo",
+    "price": 60,
+    "likes": 0
+  },
+  {
+    "title": "barstool",
+    "description": "A barstool made from the oak that is guaranteed to make your space look classy",
+    "product_image": "https://unsplash.com/photos/4kTbAMRAHtQ",
+    "price": 110,
+    "likes": 0
+  },
+  {
+    "title": "barstool",
+    "description": "A canvas bag to hold all of your possessions",
+    "product_image": "https://unsplash.com/photos/O_bhy3TnSYUQ",
+    "price": 77,
+    "likes": 0
+  },
+  {
+    "title": "water bottle",
+    "description": "A green water bottle made of metal that is slick looking and indestructible",
+    "product_image": "https://unsplash.com/photos/reEySFadyJQ",
+    "price": 25,
+    "likes": 0
+  },
+  {
+    "title": "road bike",
+    "description": "A black bicycle that is build for speed",
+    "product_image": "https://unsplash.com/photos/yjAFnkLtKY0",
+    "price": 750,
+    "likes": 0
+  },
+  {
+    "title": "xbox controller",
+    "description": "White xbox controller",
+    "product_image": "https://unsplash.com/photos/0POwK6iAiRQ",
+    "price": 45,
+    "likes": 0
+  },
+  {
+    "title": "wireless mouse",
+    "description": "Black wireless mouse the is designed to fit perfectly in a hand",
+    "product_image": "https://unsplash.com/photos/ZtxED1cpB1E",
+    "price": 65,
+    "likes": 0
+  },
+  {
+    "title": "coffee beans",
+    "description": "Dark coffee beans from Costa Rica",
+    "product_image": "https://unsplash.com/photos/FNOYT3NDdE0",
+    "price": 15,
+    "likes": 0
+  }
+]
