@@ -5,7 +5,11 @@ const router = require('express').Router();
 const controller = require('./products.controller');
 
 // /products/:id
-router.route('/:id').get(controller.read).all(methodNotAllowed);
+router
+  .route('/:id')
+  .get(controller.read)
+  .put(controller.update)
+  .all(methodNotAllowed);
 
 // /products
 router

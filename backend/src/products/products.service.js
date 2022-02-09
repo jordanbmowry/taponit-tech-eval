@@ -15,6 +15,22 @@ const create = (product) => {
 const read = (id) => {
   return knex('products').select('*').where({ product_id: id }).first();
 };
+/* UPDATE products
+SET column1 = value1,
+    column2 = value2,
+    ...
+WHERE condition;
+PUT /products/:id
+*/
+const update = (updatedProduct) => {
+  const { product_id } = updatedProduct;
+  return knex('products')
+    .select('*')
+    .where({ product_id })
+    .update(updatedProduct, '*')
+    .then((updated) => updated[0]);
+};
+
 // SELECT * FROM products;
 // GET /products
 const list = () => {
@@ -24,5 +40,6 @@ const list = () => {
 module.exports = {
   create,
   read,
+  update,
   list,
 };

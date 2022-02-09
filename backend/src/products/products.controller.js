@@ -56,6 +56,15 @@ const read = (req, res) => {
   return res.json(product);
 };
 
+const update = async (req, res) => {
+  const updatedProduct = {
+    ...res.locals.body,
+    product_id: req.params.id,
+  };
+  const data = await service.update(updatedProduct);
+  return res.json({ data });
+};
+
 const list = async (req, res) => {
   const data = await service.list();
   return res.json({ data });
@@ -71,4 +80,11 @@ module.exports = {
   ],
   read: [asyncErrorBoundary(productExists), asyncErrorBoundary(read)],
   list: asyncErrorBoundary(list),
+  update: [
+    passDownBodyToPipeline,
+    asyncErrorBoundary(productExists),
+    productHasValidProperties,
+    productHasRequiredProperties,
+    update,
+  ],
 };
