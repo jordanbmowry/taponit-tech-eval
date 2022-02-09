@@ -8,6 +8,10 @@ const controller = require('./products.controller');
 router.route('/:id').get(controller.read).all(methodNotAllowed);
 
 // /products
-router.route('/').get(controller.list).all(methodNotAllowed);
+router
+  .route('/')
+  .get(controller.list)
+  .post(controller.create)
+  .all(methodNotAllowed);
 
 module.exports = router;
