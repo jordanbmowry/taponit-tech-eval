@@ -65,6 +65,12 @@ const update = async (req, res) => {
   return res.json({ data });
 };
 
+const destroy = async (req, res) => {
+  const { id } = req.params;
+  await service.delete(id);
+  res.sendStatus(204);
+};
+
 const list = async (req, res) => {
   const data = await service.list();
   return res.json({ data });
@@ -87,4 +93,5 @@ module.exports = {
     productHasRequiredProperties,
     update,
   ],
+  delete: [asyncErrorBoundary(productExists), asyncErrorBoundary(destroy)],
 };

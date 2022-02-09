@@ -4,7 +4,7 @@ const hasProperties = (...properties) => {
 
     try {
       properties.forEach((property) => {
-        if (!body[property]) {
+        if (body[property] === undefined) {
           const error = new Error(`A '${property}' property is required.`);
           error.status = 400;
           throw error;

@@ -9,6 +9,7 @@ router
   .route('/:id')
   .get(controller.read)
   .put(controller.update)
+  .delete(controller.delete)
   .all(methodNotAllowed);
 
 // /products

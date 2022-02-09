@@ -36,10 +36,17 @@ const update = (updatedProduct) => {
 const list = () => {
   return knex('products').select('*');
 };
+// DELETE FROM table_name
+// WHERE condition;
+// DELETE /products/:id
+const destroy = (id) => {
+  return knex('products').where({ product_id: id }).del();
+};
 
 module.exports = {
   create,
   read,
   update,
   list,
+  delete: destroy,
 };
