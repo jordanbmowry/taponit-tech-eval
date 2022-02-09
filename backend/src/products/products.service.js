@@ -4,13 +4,11 @@ const knex = require('../db/connection');
 const list = () => {
   return knex('products').select('*');
 };
-// SELECT * FROM products WHERE category_id = id;
+// SELECT * FROM products WHERE product_id = id;
 // GET /products/:id
 const read = (id) => {
   return knex('products').select('*').where({ product_id: id }).first();
 };
-
-// SELECT * FROM categories WHERE product_id = 2;
 
 module.exports = {
   list,
