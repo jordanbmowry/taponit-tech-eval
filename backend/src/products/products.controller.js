@@ -18,18 +18,6 @@ const productHasValidProperties = hasOnlyValidProperties(VALID_PROPERTIES);
 // validate the product has all valid properties
 const productHasRequiredProperties = hasProperties(...VALID_PROPERTIES);
 
-const likesIsEqualOrGreaterThanZero = (req, res, next) => {
-  const { likes } = res.locals.body;
-
-  if (Number.parseInt(likes, 10) < 0) {
-    return next({
-      status: 400,
-      message: 'likes must be greater or equal to zero',
-    });
-  }
-  next();
-};
-
 const productExists = async (req, res, next) => {
   const { id } = req.params;
 
@@ -45,17 +33,19 @@ const productExists = async (req, res, next) => {
 };
 
 // CRUDL
+
+// POST /products
 const create = async (req, res) => {
   const { body } = res.locals;
   const data = await service.create(body);
   return res.status(201).json({ data });
 };
-
+// GET /products/:id
 const read = (req, res) => {
   const { product } = res.locals;
   return res.json(product);
 };
-
+// PUT /products/:id
 const update = async (req, res) => {
   const updatedProduct = {
     ...res.locals.body,
@@ -64,13 +54,13 @@ const update = async (req, res) => {
   const data = await service.update(updatedProduct);
   return res.json({ data });
 };
-
+// DELETE /products/:id
 const destroy = async (req, res) => {
   const { id } = req.params;
   await service.delete(id);
   res.sendStatus(204);
 };
-
+// GET /products
 const list = async (req, res) => {
   const data = await service.list();
   return res.json({ data });
@@ -81,7 +71,6 @@ module.exports = {
     passDownBodyToPipeline,
     productHasValidProperties,
     productHasRequiredProperties,
-    likesIsEqualOrGreaterThanZero,
     asyncErrorBoundary(create),
   ],
   read: [asyncErrorBoundary(productExists), asyncErrorBoundary(read)],
