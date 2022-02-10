@@ -1,0 +1,66 @@
+.product {
+  box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 0.3125rem;
+  padding: 0.25rem;
+  background-color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.product:hover {
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  font-size: 1.5rem;
+  margin: 2rem 0;
+}
+
+.description {
+  background-color: #f1f1f1;
+  width: 85%;
+  padding: 1.5rem;
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.img {
+  border-radius: 0.3125rem 0.3125rem 0 0;
+  object-fit: cover;
+  width: 50%;
+  height: 20rem;
+  transition: all 0.5s ease;
+}
+
+.img:hover {
+  filter: grayscale(90%);
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.link {
+  padding: 1.2rem 2rem;
+  background-color: var(--btn-color);
+  color: var(--text-color);
+  overflow: hidden;
+  text-decoration: none;
+  font: bold;
+  border-radius: 0.25rem;
+}
+
+@media (width <= 61.875rem) {
+  .img {
+    width: 75%;
+  }
+}

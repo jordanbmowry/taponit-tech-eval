@@ -1,0 +1,29 @@
+.grid {
+  display: grid;
+  width: 95%;
+  gap: 1rem;
+  margin: 3.5rem 0;
+  justify-content: center;
+}
+
+@media (width <= 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1250px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 1250px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 95%;
+    gap: 1rem;
+    margin: 3.5rem 0;
+    justify-content: center;
+  }
+}
