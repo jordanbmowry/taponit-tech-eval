@@ -6,6 +6,7 @@ import LikeEmpty from '../assets/favorite-empty.svg';
 import { useState } from 'react';
 import { useFetch } from '../hooks/useFetch';
 // snackbar module
+import snackbar from 'snackbar';
 
 export default function Like(props) {
   const { created_at, updated_at, product_id, ...rest } = props.product;

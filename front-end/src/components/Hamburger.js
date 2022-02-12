@@ -26,13 +26,6 @@ export default function Hamburger({ products }) {
             <NavLink to={`/${product.product_id}`}>{product.title}</NavLink>
           </li>
         ))}
-        <li>
-          Total likes:{' '}
-          {products.reduce(
-            (acc, curr) => acc + Number.parseInt(curr.likes, 10),
-            0
-          )}
-        </li>
       </ul>
     </div>
   );
